@@ -1,23 +1,25 @@
 import './Header.scss';
-import '../../assets/logo/BrainFlix-logo.svg';
+import Logo from '../../assets/logo/BrainFlix-logo.svg';
+import Search from '../../assets/icons/search.svg';
+import Upload from '../../assets/icons/upload.svg';
 
 function Header(props) {
 
     return (
-        <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <header className="menu">
+        <img src={Logo} className="menu__logo" alt="logo" />
+
+        <div className="menu__container1">
+          <input className="menu__search-bar" placeholder="Search"/>
+          <img src={Search} className="menu__magnifying-glass" alt="magnifying glass" />
+          <div className='menu__avatar'></div>
+        </div>
+        
+        <div className="menu__container2">
+          <button className="menu__button">UPLOAD</button>
+          <img src={Upload} className="menu__upload-svg" alt="upload svg" />
+        </div>
+        </header>
     )
 } 
 
