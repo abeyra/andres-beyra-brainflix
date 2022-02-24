@@ -9,6 +9,7 @@ function Header(props) {
         <header className="menu">
         <img src={Logo} className="menu__logo" alt="logo" />
 
+      <div className="menu__content">
         <div className="menu__container1">
           <input className="menu__search-bar" placeholder="Search"/>
           <img src={Search} className="menu__magnifying-glass" alt="magnifying glass" />
@@ -20,6 +21,7 @@ function Header(props) {
           <img src={Upload} className="menu__upload-svg" alt="upload svg" />
         </div>
         <div className='menu__avatar2'></div>
+      </div>
         </header>
     )
 } 
