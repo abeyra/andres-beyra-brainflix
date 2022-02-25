@@ -1,5 +1,13 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+
 .hero {
     &__video {
         width: 100%;
+
+        @include tablet {
+            margin: 0 36px;
+        }
     }
 }
