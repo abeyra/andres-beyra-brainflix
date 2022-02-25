@@ -14,7 +14,9 @@ class Hero extends React.Component {
     render() {
         return (
             <>
-            <video className="hero__video" poster={this.state.Videos1[0].image} controls></video>
+            <div className="hero__container">
+                <video className="hero__video" poster={this.state.Videos1[0].image} controls></video>
+            </div>
             </>
         )
     }     
