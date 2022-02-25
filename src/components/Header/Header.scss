@@ -4,6 +4,7 @@
 
 .menu {
     padding: 0 16px;
+    font-family: 'AvenirNext';
 
     @include tablet {
         display: flex;
@@ -47,6 +48,7 @@
     }
 
     &__search-bar {
+        font-family: 'AvenirNext';
         height: 32px;
         width: 62vw;
         border-radius: 4px;
@@ -104,6 +106,7 @@
         padding: 12px;
         margin: 16px 0;
         font-weight: 700;
+        font-family: 'AvenirNext';
         border: none;
         border-radius: 4px;
         background-color: $BrainFlix-Blue;
