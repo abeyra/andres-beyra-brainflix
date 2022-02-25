@@ -34,7 +34,7 @@
         }
     }
 
-    &__container1 {
+    &__container-search {
         position: relative;
 
         @include tablet {
@@ -85,11 +85,16 @@
         }
     }
 
-    &__container2 {
+    &__container-upload {
         position: relative;
 
+        @include tablet {
+            margin: 0 24px;
+        }
+
         @include desktop {
-            // margin-left: -1%;
+            margin-left: 24px;
+            margin-right: 40px;
         }
         
     }

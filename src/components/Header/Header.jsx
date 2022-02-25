@@ -10,13 +10,13 @@ function Header(props) {
         <img src={Logo} className="menu__logo" alt="logo" />
 
       <div className="menu__content">
-        <div className="menu__container1">
+        <div className="menu__container-search">
           <input className="menu__search-bar" placeholder="Search"/>
           <img src={Search} className="menu__magnifying-glass" alt="magnifying glass" />
           <div className='menu__avatar'></div>
         </div>
         
-        <div className="menu__container2">
+        <div className="menu__container-upload">
           <button className="menu__button">UPLOAD</button>
           <img src={Upload} className="menu__upload-svg" alt="upload svg" />
         </div>
