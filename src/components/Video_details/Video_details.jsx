@@ -23,18 +23,21 @@ class Video_details extends React.Component {
 
                     <div className="Video_details-row">
                         <p className="Video_details-author">{"By " + this.state.details[0].channel}</p>
-                        <div className="Video_details-views">
-                            <img className="Video_details-views-icon" src={Views} alt="views icon" />
-                            <p className="Video_details-views-number">{this.state.details[0].views}</p>
-                        </div>
+                         <p className="Video_details-date">{new Date (this.state.details[0].timestamp).toLocaleDateString("en-US")}</p>
+                        
                     </div>
 
                     <div className="Video_details-row">
-                        <p className="Video_details-date">{new Date (this.state.details[0].timestamp).toLocaleDateString("en-US")}</p>
+
+                       <div className="Video_details-views">
+                            <img className="Video_details-views-icon" src={Views} alt="views icon" />
+                            <p className="Video_details-views-number">{this.state.details[0].views}</p>
+                        </div>
                         <div className="Video_details-likes">
                             <img className="Video_details-likes-icon" src={Likes} alt="likes icon" />
                             <p className="Video_details-likes-number">{this.state.details[0].likes}</p>
                         </div>
+                        
                     </div>
 
                 </div>
