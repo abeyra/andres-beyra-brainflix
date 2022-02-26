@@ -5,6 +5,10 @@
 .Comments_form {
     padding: 0 16px; 
 
+    @include tablet {
+        padding: 0 36px; 
+    }
+
     &-title {
         font-size: 13px;
         font-weight: 700;
@@ -17,6 +21,12 @@
         float: left; 
         margin-top: 36px;
         margin-right: 16px;
+    }
+
+    &-wrapper {
+        @include tablet {
+            position: relative;
+        }
     }
 
     &-form {
@@ -41,11 +51,23 @@
         background-color: $Alabaster;
         border: 1px solid $Mercury;
         resize: none;
+
+        @include tablet {
+            width: 68%; 
+            height: 20px;
+        }
     }
 
     &-cta {
         position: relative;
         margin: 16px 0;
+
+        @include tablet {
+            position: absolute;
+            width: 23%;
+            right: 0;
+            top: 5px;
+        }
 
         &-button {
             @include cta;

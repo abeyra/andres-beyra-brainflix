@@ -10,15 +10,18 @@ function Comments_form() {
 
                 <div className="Comments_form-avatar"></div>
                 
-                <form className='Comments_form-form' action="">
-                    <label className="Comments_form-label" htmlFor="">JOIN THE CONVERSATION</label>
-                    <textarea className="Comments_form-textarea" name="" id="">Add a new comment</textarea>
-                    <div className="Comments_form-cta">
-                        <button className="Comments_form-cta-button">COMMENT</button>
-                        <img className="Comments_form-cta-icon" src={CTA} alt="call to action icon" />
-                    </div>
-                </form>
 
+                <div className="Comments_form-wrapper">
+                    <form className='Comments_form-form' action="">
+                        <label className="Comments_form-label" htmlFor="textarea">JOIN THE CONVERSATION</label>
+                        <textarea id="textarea" className="Comments_form-textarea" name="" id="">Add a new comment</textarea>
+                        <div className="Comments_form-cta">
+                            <button className="Comments_form-cta-button">COMMENT</button>
+                            <img className="Comments_form-cta-icon" src={CTA} alt="call to action icon" />
+                        </div>
+                    </form>
+                    
+                </div>
 
 
 
