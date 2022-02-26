@@ -1,0 +1,65 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+
+.Comments_form {
+    padding: 0 16px; 
+
+    &-title {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 18px;
+        color: $BrainFlix-DarkBlack;
+    }
+
+    &-avatar {
+        @include avatar;
+        float: left; 
+        margin-top: 36px;
+        margin-right: 16px;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        margin: 16px 0;
+    }
+
+    &-label {
+        font-family: 'AvenirNext';
+        line-height: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        color: $Silver; 
+    }
+
+    &-textarea {
+        font-family: 'AvenirNext';
+        padding: 10px;
+        border-radius: 4px;
+        height: 70px;
+        background-color: $Alabaster;
+        border: 1px solid $Mercury;
+        resize: none;
+    }
+
+    &-cta {
+        position: relative;
+        margin: 16px 0;
+
+        &-button {
+            @include cta;
+            
+        }
+
+        &-icon {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            height: 20px;
+        }
+    }
+    
+
+    
+}

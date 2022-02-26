@@ -6,8 +6,8 @@ import Details from '../../data/video-details.json';
 class Hero extends React.Component {
     
     state = { 
-        Videos1: Videos,
-        Details1: Details 
+        videos: Videos,
+        details: Details 
      }
 
 
@@ -15,7 +15,7 @@ class Hero extends React.Component {
         return (
             <>
             <div className="hero__container">
-                <video className="hero__video" poster={this.state.Videos1[0].image} controls></video>
+                <video className="hero__video" poster={this.state.videos[0].image} controls></video>
             </div>
             </>
         )

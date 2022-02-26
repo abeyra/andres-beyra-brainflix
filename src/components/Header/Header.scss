@@ -73,14 +73,8 @@
     }
 
     &__avatar {
-        border-radius: 50%;
-        max-width: 36px;
-        max-height: 36px;
-        width: 36px;
-        height: 36px;
+        @include avatar; 
         float: right;
-        background-image: url("../../assets/images/Mohan-muruge.jpg");
-        background-size: cover;
 
         @include tablet {
             display: none;
