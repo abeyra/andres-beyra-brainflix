@@ -1,0 +1,49 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+
+.Video-list {
+    margin: 16px 0; 
+    padding: 0 16px;
+
+    &__title {
+        font-family: 'AvenirNext';
+        font-size: 13px;
+        font-weight: 700;
+        color: $Silver;
+    }
+
+    &__videos {
+        margin: 16px 0;
+    }
+
+    &__video {
+        display: flex;
+        margin: 8px 0;
+
+        &-image {
+            width: 75px;
+            // height: 50px;
+            border-radius: 4px;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 16px;
+
+            &-title {
+                font-family: 'AvenirNext';
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 18px;
+            }
+
+            &-channel {
+                font-family: 'AvenirNext';
+                font-size: 12px;
+            }
+        }
+    }
+}
