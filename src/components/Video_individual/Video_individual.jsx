@@ -3,7 +3,7 @@ import './Video_individual.scss';
 export default function Video_individual({id, image, title, channel, handleVideoChange}) {
 
     return (
-        <a onClick={() => handleVideoChange(id) }  href="#root">
+        <a className="Video-list__link" onClick={() => handleVideoChange(id) }  href="#root">
             <li className="Video-list__video">
                 <div className="Video-list__video-image-container">
                     <img className="Video-list__video-image" src={image} alt="video image" />

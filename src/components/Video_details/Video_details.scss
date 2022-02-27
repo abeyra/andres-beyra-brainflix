@@ -24,6 +24,10 @@
             font-size: 33px;
             line-height: 44px;
         }
+
+        @include desktop {
+            margin-top: 32px;
+        }
     }
 
     &-metrics {

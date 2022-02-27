@@ -9,8 +9,16 @@
         padding: 0 36px;
     }
 
+    @include desktop {
+        padding: 0;
+    }
+
     &__container {
         border-top: 1px solid $Mercury;
+
+        @include desktop {
+            border-top: none;
+        }
     }
 
     &__post {
@@ -20,6 +28,11 @@
 
         @include tablet {
             padding: 24px 0 24px 0;
+        }
+
+        @include desktop {
+            border-bottom: none;
+            border-top: .0625rem solid $Mercury;
         }
 
         &-circle {
@@ -34,11 +47,19 @@
                 width: 40px;
                 height: 40px;
             }
+
+            @include desktop {
+                margin-left: 8px;
+            }
         }
 
         &-content {
             display: flex;
             flex-direction: column;
+
+            @include desktop {
+                padding: 0 16px;
+            }
 
             &-author {
                 font-family: 'AvenirNext';
@@ -59,6 +80,10 @@
 
                 @include tablet {
                     font-size: 14px;
+                }
+
+                @include desktop {
+                    right: 24px;
                 }
             }
 

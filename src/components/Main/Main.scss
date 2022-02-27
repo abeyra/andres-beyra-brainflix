@@ -8,8 +8,18 @@
         padding: 0 120px;
     }
 
+    &-left {
+        @include desktop {
+            width: 69%;
+        }
+        
+    }
+
     &-right {
-        border-left: 1px solid $Mercury;
+        @include desktop {
+            width: 31%;
+            border-left: 1px solid $Mercury;
+        }
     }
 }
 

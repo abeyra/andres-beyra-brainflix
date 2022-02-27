@@ -12,6 +12,7 @@
     }
 
     @include desktop {
+        margin-top: 32px;
         padding-left: 24px;
     }
 
@@ -28,6 +29,10 @@
         @include tablet {
             margin: 24px 0;
         }
+    }
+
+    &__link {
+        text-decoration: none;
     }
 
     &__video {
