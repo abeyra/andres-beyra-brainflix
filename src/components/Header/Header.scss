@@ -64,7 +64,7 @@
         top: .625rem;
     }
 
-    &__avatar {
+    &__avatar-mobile {
         @include avatar;
         background-image: url("../../assets/images/Mohan-muruge.jpg");
         background-size: cover; 
@@ -125,7 +125,7 @@
         }
     }
 
-    &__avatar2 {
+    &__avatar-tablet {
         @include avatar;
         float: right;
         background-image: url("../../assets/images/Mohan-muruge.jpg");

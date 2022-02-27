@@ -12,13 +12,13 @@ export default function Header() {
           <div className="menu__container-search">
             <input className="menu__search-bar" placeholder="Search"/>
             <img src={Search} className="menu__magnifying-glass" alt="magnifying glass" />
-            <div className='menu__avatar'></div>
+            <div className='menu__avatar-mobile'></div>
           </div>
           <div className="menu__container-upload">
             <button className="menu__button">UPLOAD</button>
             <img src={Upload} className="menu__container-upload-icon" alt="upload svg" />
           </div>
-          <div className='menu__avatar2'></div>
+          <div className='menu__avatar-tablet'></div>
         </div>
       </header>
     )
