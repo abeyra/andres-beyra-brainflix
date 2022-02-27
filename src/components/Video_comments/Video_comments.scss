@@ -36,17 +36,10 @@
         }
 
         &-circle {
-            border-radius: 50%;
-            width: 2.25rem; 
-            height: 2.25rem; 
+            @include avatar;
             float: left;
             margin-right: 1rem;
             background-color: $Mercury;
-
-            @include tablet {
-                width: 2.5rem;
-                height: 2.5rem;
-            }
 
             @include desktop {
                 margin-left: .5rem;

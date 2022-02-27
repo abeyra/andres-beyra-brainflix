@@ -65,7 +65,9 @@
     }
 
     &__avatar {
-        @include avatar; 
+        @include avatar;
+        background-image: url("../../assets/images/Mohan-muruge.jpg");
+        background-size: cover; 
         float: right;
 
         @include tablet {
@@ -124,11 +126,7 @@
     }
 
     &__avatar2 {
-        border-radius: 50%;
-        max-width: 2.5rem;
-        max-height: 2.5rem;
-        width: 2.5rem;
-        height: 2.5rem;
+        @include avatar;
         float: right;
         background-image: url("../../assets/images/Mohan-muruge.jpg");
         background-size: cover;
