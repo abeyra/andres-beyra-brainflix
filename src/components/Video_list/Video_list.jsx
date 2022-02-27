@@ -1,13 +1,9 @@
 import './Video_list.scss';
-import React from 'react';
-import Videos from '../../data/videos.json';
+import Video_individual from '../Video_individual/Video_individual';
 
-class Video_list extends React.Component {
+export default function Video_list({id, videos, currentVideo, handleVideoChange}) {
 
-    state = {
-        videos: Videos
-    }
-    render() {
+    
         return (
             <>
             <section className="Video-list">
@@ -15,22 +11,38 @@ class Video_list extends React.Component {
 
                 <ul className="Video-list__videos">
 
-                    {this.state.videos.map((video) => {
-                        return (
-                            <li className="Video-list__video">
-                                <div className="Video-list__video-image-container">
-                                    <img className="Video-list__video-image" src={video.image} alt="video image" />
-                                </div>
-                                <div className="Video-list__video-content">
-                                    <p className="Video-list__video-content-title">{video.title}</p>
-                                    <p className="Video-list__video-content-channel">{video.channel}</p>
-                                </div>
+                    {videos
+                    .filter(video => video.id !== currentVideo.id)
 
-                            </li>
+                    .map((video) => {
+                        return (
+                            <Video_individual 
+                                key={video.id}
+                                id={video.id}
+                                image={video.image}
+                                title={video.title}
+                                channel={video.channel}
+                                handleVideoChange={handleVideoChange}
+                            
+                            />
+
+                            // <a onClick={() => handleVideoChange(id) }  href="#root">
+                            // <li className="Video-list__video">
+                            //     <div className="Video-list__video-image-container">
+                            //         <img className="Video-list__video-image" src={video.image} alt="video image" />
+                            //     </div>
+                            //     <div className="Video-list__video-content">
+                            //         <p className="Video-list__video-content-title">{video.title}</p>
+                            //         <p className="Video-list__video-content-channel">{video.channel}</p>
+                            //     </div>
+
+                            // </li>
+                            // </a>
                         )
 
 
-                    })}
+                    })
+                }
 
                 </ul>
 
@@ -39,6 +51,3 @@ class Video_list extends React.Component {
             </>
         )
     }
-}
-
-export default Video_list;
