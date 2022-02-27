@@ -11,7 +11,6 @@ export default function Main({videos, currentVideo, handleVideoChange}) {
     return (
         <>
         <Header />
-
         <Hero 
             videos={videos}
             currentVideo={currentVideo}
@@ -29,14 +28,11 @@ export default function Main({videos, currentVideo, handleVideoChange}) {
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}
         />
-
         <Video_list 
             videos={videos}
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}
         />
-
         </>
     )
-
 }

@@ -25,8 +25,7 @@ class App extends React.Component {
         videos={this.state.videos}
         currentVideo={this.state.currentVideo}
         handleVideoChange={this.handleVideoChange}
-        />
-         
+        />    
       </div>
     );
   }

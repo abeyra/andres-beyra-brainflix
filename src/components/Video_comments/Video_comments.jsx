@@ -1,16 +1,12 @@
 import './Video_comments.scss';
-// import Details from '../../data/video-details.json';
 
+export default function Video_comments({currentVideo}) {
 
-export default function Video_comments({videos, currentVideo, handleVideoChange}) {
-
-        return (
-            <>
-                <section className="Comments">
+    return (
+        <>
+            <section className="Comments">
                 <ul className="Comments__container">
-
                     {currentVideo.comments.map((comment) => {
-                        
                         return (
                             <li className='Comments__post' key={comment.id}>
                                 <div className="Comments__post-circle"></div>
@@ -21,14 +17,12 @@ export default function Video_comments({videos, currentVideo, handleVideoChange}
                                 </div>
                             </li>
                             )
-
                         }
-                    )
-                
+                    )              
                 }
                 </ul>
-                </section>
-            </>
-        )
-    }
+            </section>
+        </>
+    )
+}
 
