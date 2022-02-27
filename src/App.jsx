@@ -16,22 +16,26 @@ class App extends React.Component {
     currentVideo: Video_data[0] 
   }
 
-  // handleVideoChange = (id) => {
-  //   const newVideoId = this.state.Videos.findIndex(video => === video.id)
-  //   this.setState({
-  //     currentVideo: this.state.Videos[newVideoId]
-  //   })
-  // }
+  handleVideoChange = (id) => {
+    const newVideoId = this.state.Videos.findIndex(video => === video.id)
+    this.setState({
+      currentVideo: this.state.Videos[newVideoId]
+    })
+  }
 
   render() {
     return (
       <div className="App">
         <Header />
         <Hero 
-        
+        Videos={this.state.Videos}
+        currentVideo={this.state.currentVideo}
+        handleVideoChange={this.handleVideoChange}
         />
         <Video_details 
-      
+        Videos={this.state.Videos}
+        currentVideo={this.state.currentVideo}
+        handleVideoChange={this.handleVideoChange}
         />
         <Comments_form />
         <Video_comments />
