@@ -9,6 +9,10 @@
         padding: 0 36px; 
     }
 
+    @include desktop {
+        padding: 0;
+    }
+
     &-title {
         font-size: 13px;
         font-weight: 700;
@@ -21,11 +25,20 @@
         float: left; 
         margin-top: 36px;
         margin-right: 16px;
+
+        @include desktop {
+            margin-left: 8px;
+            margin-right: 32px;
+        }
     }
 
     &-wrapper {
         @include tablet {
             position: relative;
+        }
+
+        @include desktop {
+            margin: 0 8px;
         }
     }
 
@@ -76,6 +89,9 @@
         &-button {
             @include cta;
             
+            @include desktop {
+                width: 90%;
+            }
         }
 
         &-icon {

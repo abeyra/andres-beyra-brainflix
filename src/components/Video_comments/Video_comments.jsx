@@ -1,6 +1,6 @@
 import './Video_comments.scss';
 
-export default function Video_comments({currentVideo}) {
+export default function Video_comments({currentVideo, key}) {
 
     return (
         <>

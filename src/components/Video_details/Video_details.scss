@@ -9,6 +9,10 @@
         padding: 0 36px;
     }
 
+    @include desktop {
+        padding: 0;
+    }
+
     &-title {
         font-family: 'AvenirNext';
         font-size: 24px;
@@ -35,6 +39,10 @@
             border-top: none;
             padding: 8px 0;
             margin: 8px 0 24px 0;
+        }
+
+        @include desktop {
+            padding-right: 24px;
         }
     }
 

@@ -1,0 +1,15 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+
+.Main__container {
+    @include desktop {
+        display: flex;
+        padding: 0 120px;
+    }
+
+    &-right {
+        border-left: 1px solid $Mercury;
+    }
+}
+

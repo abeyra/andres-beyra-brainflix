@@ -11,6 +11,10 @@
         padding: 0 36px;
     }
 
+    @include desktop {
+        padding-left: 24px;
+    }
+
     &__title {
         font-family: 'AvenirNext';
         font-size: 13px;

@@ -16,6 +16,8 @@ export default function Main({videos, currentVideo, handleVideoChange}) {
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}
         />
+        <section className="Main__container">
+        <div className="Main__container-left">
         <Video_details 
             videos={videos}
             currentVideo={currentVideo}
@@ -28,11 +30,15 @@ export default function Main({videos, currentVideo, handleVideoChange}) {
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}
         />
+        </div>
+        <div className="Main__container-right"> 
         <Video_list 
             videos={videos}
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}
         />
+        </div>
+        </section>
         </>
     )
 }
