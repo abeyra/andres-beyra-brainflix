@@ -18,7 +18,7 @@ function Header(props) {
         
         <div className="menu__container-upload">
           <button className="menu__button">UPLOAD</button>
-          <img src={Upload} className="menu__upload-svg" alt="upload svg" />
+          <img src={Upload} className="menu__container-upload-icon" alt="upload svg" />
         </div>
         <div className='menu__avatar2'></div>
       </div>

@@ -93,6 +93,22 @@
             margin-right: 40px;
         }
         
+        &-icon {
+            position: absolute;
+            left: 8px;
+            top: 24px;
+
+            @include tablet {
+                top: 10px;
+                height: 20px;
+            }
+
+            @include desktop {
+                height: 22px;
+            }
+
+        }
+
     }
 
     &__button {
@@ -113,20 +129,6 @@
 
         @include desktop {
             width: 12vw; 
-        }
-    }
-
-    &__upload-svg {
-        position: absolute;
-        left: 8px;
-        top: 24px;
-
-        @include tablet {
-            top: 8px;
-        }
-
-        @include desktop {
-            height: 22px;
         }
     }
 

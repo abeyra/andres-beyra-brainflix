@@ -48,6 +48,10 @@
             padding-left: 16px;
             height: 60px;
 
+            @include tablet {
+                max-width: 160px; 
+            }
+
             &-title {
                 font-family: 'AvenirNext';
                 font-size: 12px;
