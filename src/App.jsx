@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Video_details from './components/Video_details/Video_details';
 import Comments_form from './components/Comments_form/Comments_form';
+import Video_comments from './components/Video_comments/Video_comments';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Video_details />
       <Comments_form />
+      <Video_comments />
     </div>
   );
 }

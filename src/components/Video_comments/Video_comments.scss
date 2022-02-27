@@ -1,0 +1,80 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+
+.Comments {
+    padding: 0 16px; 
+
+    @include tablet {
+        padding: 0 36px;
+    }
+
+    &__container {
+        border-top: 1px solid $Mercury;
+    }
+
+    &__post {
+        position: relative;
+        padding: 1rem 0 1rem 0;
+        border-bottom: .0625rem solid $Mercury;
+
+        @include tablet {
+            padding: 24px 0 24px 0;
+        }
+
+        &-circle {
+            border-radius: 50%;
+            width: 2.25rem; 
+            height: 2.25rem; 
+            float: left;
+            margin-right: 1rem;
+            background-color: $Mercury;
+
+            @include tablet {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+
+            &-author {
+                font-family: 'AvenirNext';
+                font-size: .8125rem;
+                font-weight: 600;
+
+                @include tablet {
+                    font-size: 14px;
+                }
+            }
+
+            &-date {
+                font-family: 'AvenirNext';
+                position: absolute;
+                right: 0; 
+                font-size: .8125rem;
+                color: $Silver;
+
+                @include tablet {
+                    font-size: 14px;
+                }
+            }
+
+            &-message {
+                font-family: 'AvenirNext';
+                font-size: .8125rem;
+                line-height: 1.125rem;
+                margin-top: .5rem;
+
+                @include tablet {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+       
+    }
+}
