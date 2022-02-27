@@ -70,6 +70,10 @@
         @include tablet {
             margin: 0 32px 0 0;
         }
+
+        @include desktop {
+            font-size: 13px;
+        }
     }
 
     &-date {
@@ -118,6 +122,10 @@
             font-size: 14px;
             line-height: 22px;
             margin-bottom: 32px;
+        }
+
+        @include desktop {
+            margin-bottom: 40px;
         }
     }
 }

@@ -33,6 +33,10 @@
 
     &__link {
         text-decoration: none;
+
+        &:visited {
+            color: black;
+        }
     }
 
     &__video {
@@ -47,7 +51,7 @@
             width: 100px;
             height: 65px;
             border-radius: 4px;
-            // height: 75px;
+            image-rendering: pixelated;
         }
 
         &-content {

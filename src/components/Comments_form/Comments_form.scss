@@ -14,6 +14,7 @@
     }
 
     &-title {
+        font-family: 'AvenirNext';
         font-size: 13px;
         font-weight: 700;
         line-height: 18px;
@@ -99,6 +100,11 @@
             left: 12px;
             top: 12px;
             height: 20px;
+
+            @include desktop {
+                left: 10px; 
+                top: 10px;
+            }
         }
     }
     
