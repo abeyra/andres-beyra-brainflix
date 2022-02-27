@@ -26,18 +26,6 @@ export default function Video_list({id, videos, currentVideo, handleVideoChange}
                             
                             />
 
-                            // <a onClick={() => handleVideoChange(id) }  href="#root">
-                            // <li className="Video-list__video">
-                            //     <div className="Video-list__video-image-container">
-                            //         <img className="Video-list__video-image" src={video.image} alt="video image" />
-                            //     </div>
-                            //     <div className="Video-list__video-content">
-                            //         <p className="Video-list__video-content-title">{video.title}</p>
-                            //         <p className="Video-list__video-content-channel">{video.channel}</p>
-                            //     </div>
-
-                            // </li>
-                            // </a>
                         )
 
 

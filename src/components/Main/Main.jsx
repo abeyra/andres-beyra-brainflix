@@ -24,6 +24,7 @@ export default function Main({videos, currentVideo, handleVideoChange}) {
         />
         <Comments_form />
         <Video_comments 
+            key={currentVideo.id}
             videos={videos}
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}
