@@ -3,10 +3,10 @@
 @use '../../styles/partials/mixins' as *;
 
 .Comments_form {
-    padding: 0 16px; 
+    padding: 0 1rem; 
 
     @include tablet {
-        padding: 0 36px; 
+        padding: 0 2.25rem; 
     }
 
     @include desktop {
@@ -15,21 +15,21 @@
 
     &-title {
         font-family: 'AvenirNext';
-        font-size: 13px;
+        font-size: .8125rem;
         font-weight: 700;
-        line-height: 18px;
+        line-height: 1.125rem;
         color: $BrainFlix-DarkBlack;
     }
 
     &-avatar {
         @include avatar;
         float: left; 
-        margin-top: 36px;
-        margin-right: 16px;
+        margin-top: 2.25rem;
+        margin-right: 1rem;
 
         @include desktop {
-            margin-left: 8px;
-            margin-right: 32px;
+            margin-left: .5rem;
+            margin-right: 2rem;
         }
     }
 
@@ -39,52 +39,52 @@
         }
 
         @include desktop {
-            margin: 0 8px;
+            margin: 0 .5rem;
         }
     }
 
     &-form {
         display: flex;
         flex-direction: column;
-        margin-top: 16px;
+        margin-top: 1rem;
 
         @include tablet {
-            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
         }
     }
 
     &-label {
         font-family: 'AvenirNext';
-        line-height: 20px;
-        font-size: 12px;
+        line-height: 1.25rem;
+        font-size: .75rem;
         font-weight: 700;
         color: $Silver; 
     }
 
     &-textarea {
         font-family: 'AvenirNext';
-        padding: 10px;
-        border-radius: 4px;
-        height: 70px;
+        padding: .625rem;
+        border-radius: .25rem;
+        height: 4.375rem;
         background-color: $Alabaster;
-        border: 1px solid $Mercury;
+        border: .0625rem solid $Mercury;
         resize: none;
 
         @include tablet {
             width: 68%; 
-            height: 20px;
+            height: 1.25rem;
         }
     }
 
     &-cta {
         position: relative;
-        margin: 16px 0;
+        margin: 1rem 0;
 
         @include tablet {
             position: absolute;
             width: 23%;
             right: 0;
-            top: 5px;
+            top: .3125rem;
         }
 
         &-button {
@@ -97,13 +97,13 @@
 
         &-icon {
             position: absolute;
-            left: 12px;
-            top: 12px;
-            height: 20px;
+            left: .75rem;
+            top: .75rem;
+            height: 1.25rem;
 
             @include desktop {
-                left: 10px; 
-                top: 10px;
+                left: .625rem; 
+                top: .625rem;
             }
         }
     }

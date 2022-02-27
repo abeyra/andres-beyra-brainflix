@@ -5,7 +5,7 @@
 .Main__container {
     @include desktop {
         display: flex;
-        padding: 0 120px;
+        padding: 0 7.5rem;
     }
 
     &-left {
@@ -18,8 +18,8 @@
     &-right {
         @include desktop {
             width: 31%;
-            border-left: 1px solid $Mercury;
-            padding-bottom: 40px;
+            border-left: .0625rem solid $Mercury;
+            padding-bottom: 2.5rem;
         }
     }
 }

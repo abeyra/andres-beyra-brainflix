@@ -6,12 +6,12 @@
 
     &__container {
         @include tablet {
-            padding: 0 36px; 
+            padding: 0 2.25rem; 
             background: black; 
         }
 
         @include desktop {
-            padding: 0 200px; 
+            padding: 0 12.5rem; 
         }
     }
 

@@ -18,13 +18,9 @@ export default function Video_list({id, videos, currentVideo, handleVideoChange}
                                     image={video.image}
                                     title={video.title}
                                     channel={video.channel}
-                                    handleVideoChange={handleVideoChange}
-                                
+                                    handleVideoChange={handleVideoChange}                         
                                 />
-
                             )
-
-
                         })
                     }
                 </ul>

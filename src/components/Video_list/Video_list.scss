@@ -3,36 +3,37 @@
 @use '../../styles/partials/mixins' as *;
 
 .Video-list {
-    margin: 16px 0; 
-    padding: 0 16px;
+    margin: 1rem 0; 
+    padding: 0 1rem;
 
     @include tablet {
-        margin: 24px 0;
-        padding: 0 36px;
+        margin: 1.5rem 0;
+        padding: 0 2.25rem;
     }
 
     @include desktop {
-        margin-top: 32px;
-        padding-left: 24px;
+        margin-top: 2rem;
+        padding-left: 1.5rem;
     }
 
     &__title {
         font-family: 'AvenirNext';
-        font-size: 13px;
+        font-size: .8125rem;
         font-weight: 700;
         color: $Silver;
     }
 
     &__videos {
-        margin: 16px 0;
+        margin: 1rem 0;
 
         @include tablet {
-            margin: 24px 0;
+            margin: 1.5rem 0;
         }
     }
 
     &__link {
         text-decoration: none;
+        cursor: pointer;
 
         &:visited {
             color: black;
@@ -41,16 +42,16 @@
 
     &__video {
         display: flex;
-        margin: 8px 0;
+        margin: .5rem 0;
 
         @include tablet {
-            margin: 16px 0;
+            margin: 1rem 0;
         }
 
         &-image {
-            width: 100px;
-            height: 65px;
-            border-radius: 4px;
+            width: 6.25rem;
+            height: 4.0625rem;
+            border-radius: .25rem;
             image-rendering: pixelated;
         }
 
@@ -58,23 +59,23 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding-left: 16px;
-            height: 60px;
+            padding-left: 1rem;
+            height: 3.75rem;
 
             @include tablet {
-                max-width: 160px; 
+                max-width: 10rem; 
             }
 
             &-title {
                 font-family: 'AvenirNext';
-                font-size: 12px;
+                font-size: .75rem;
                 font-weight: 700;
-                line-height: 18px;
+                line-height: 1.125rem;
             }
 
             &-channel {
                 font-family: 'AvenirNext';
-                font-size: 12px;
+                font-size: .75rem;
             }
         }
     }
