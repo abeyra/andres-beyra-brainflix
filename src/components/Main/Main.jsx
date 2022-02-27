@@ -23,7 +23,12 @@ export default function Main({videos, currentVideo, handleVideoChange}) {
             handleVideoChange={handleVideoChange}
         />
         <Comments_form />
-        <Video_comments />
+        <Video_comments 
+            videos={videos}
+            currentVideo={currentVideo}
+            handleVideoChange={handleVideoChange}
+        />
+
         <Video_list 
             videos={videos}
             currentVideo={currentVideo}
