@@ -1,10 +1,10 @@
 import './Main.scss';
 import Header from '../Header/Header';
 import Hero from '../Hero/Hero';
-import Video_details from '../Video_details/Video_details';
-import Comments_form from '../Comments_form/Comments_form';
-import Video_comments from '../Video_comments/Video_comments';
-import Video_list from '../Video_list/Video_list';
+import VIDEO_DETAILS from '../Video_details/Video_details';
+import COMMENTS_FORM from '../Comments_form/Comments_form';
+import VIDEO_COMMENTS from '../Video_comments/Video_comments';
+import VIDEO_LIST from '../Video_list/Video_list';
 
 export default function Main({videos, currentVideo, handleVideoChange}) {
 
@@ -18,13 +18,13 @@ export default function Main({videos, currentVideo, handleVideoChange}) {
         />
         <section className="Main__container">
         <div className="Main__container-left">
-        <Video_details 
+        <VIDEO_DETAILS 
             videos={videos}
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}
         />
-        <Comments_form />
-        <Video_comments 
+        <COMMENTS_FORM />
+        <VIDEO_COMMENTS 
             key={currentVideo.id}
             videos={videos}
             currentVideo={currentVideo}
@@ -32,7 +32,7 @@ export default function Main({videos, currentVideo, handleVideoChange}) {
         />
         </div>
         <div className="Main__container-right"> 
-        <Video_list 
+        <VIDEO_LIST 
             videos={videos}
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}

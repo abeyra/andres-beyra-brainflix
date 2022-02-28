@@ -6,7 +6,7 @@ export default function Video_individual({id, image, title, channel, handleVideo
         <a className="Video-list__link" onClick={() => handleVideoChange(id) }  href="#root">
             <li className="Video-list__video">
                 <div className="Video-list__video-image-container">
-                    <img className="Video-list__video-image" src={image} alt="video image" />
+                    <img className="Video-list__video-image" src={image} alt="video" />
                 </div>
                 <div className="Video-list__video-content">
                     <p className="Video-list__video-content-title">{title}</p>
