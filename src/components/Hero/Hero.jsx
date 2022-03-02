@@ -7,6 +7,7 @@ export default function Hero({currentVideo}) {
             <>
             <div className="hero__container">
                 <video className="hero__video" poster={currentVideo.image} controls></video>
+                {/* <h1>{currentVideo.title}</h1> */}
             </div>
             </>
         )    

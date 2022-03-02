@@ -18,18 +18,18 @@ export default function Main({videos, currentVideo, handleVideoChange}) {
         />
         <section className="Main__container">
         <div className="Main__container-left">
-        <VIDEO_DETAILS 
+        {/* <VIDEO_DETAILS 
             videos={videos}
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}
-        />
+        /> */}
         <COMMENTS_FORM />
-        <VIDEO_COMMENTS 
-            key={currentVideo.id}
+        {/* <VIDEO_COMMENTS 
+            // key={currentVideo.id}
             videos={videos}
             currentVideo={currentVideo}
             handleVideoChange={handleVideoChange}
-        />
+        /> */}
         </div>
         <div className="Main__container-right"> 
         <VIDEO_LIST 
