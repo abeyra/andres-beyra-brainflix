@@ -3,7 +3,7 @@ import Hero from '../Hero/Hero';
 import React from 'react';
 import axios from 'axios';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-// import VIDEO_DETAILS from '../Video_details/Video_details';
+import VIDEO_DETAILS from '../Video_details/Video_details';
 // import COMMENTS_FORM from '../Comments_form/Comments_form';
 // import VIDEO_COMMENTS from '../Video_comments/Video_comments';
 import VIDEO_LIST from '../Video_list/Video_list';
@@ -31,10 +31,7 @@ class Main extends React.Component {
                     videos: videos,
                     currentVideo: response.data[0]
                 });
-            
-            // const currentVideo = response.data[0];
-            // this.setState({ videosList: videos });
-            // this.setState({ currentVideo: currentVideo});
+
         })
     }
 
@@ -49,7 +46,6 @@ class Main extends React.Component {
     //             const currentVideo = response.data;
     //         })
     //     }
-        
     // }
 
   handleVideoChange = (id) => {
@@ -64,17 +60,15 @@ class Main extends React.Component {
             <>
         
             <Hero 
+                currentVideo={this.state.currentVideo}
+            />
+            <section className="Main__container">
+            <div className="Main__container-left">
+            <VIDEO_DETAILS 
                 // videos={this.state.videos}
                 currentVideo={this.state.currentVideo}
                 // handleVideoChange={this.handleVideoChange}
             />
-            <section className="Main__container">
-            <div className="Main__container-left">
-            {/* <VIDEO_DETAILS 
-                videos={this.state.videos}
-                currentVideo={this.state.videos[0]}
-                handleVideoChange={this.handleVideoChange}
-            /> */}
             {/* <COMMENTS_FORM /> */}
             {/* <VIDEO_COMMENTS 
                 // key={this.state.videos[0].id}
