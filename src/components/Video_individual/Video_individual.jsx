@@ -1,9 +1,11 @@
 import './Video_individual.scss';
-import {Link} from 'react-router-dom'; 
+import {Link, Route, BrowserRouter} from 'react-router-dom'; 
 
 export default function Video_individual({id, image, title, channel, handleVideoChange}) {
 
     return (
+    <BrowserRouter>
+    <Route>
         <Link to={id} onClick={() => handleVideoChange(id) }>
             <li className="Video-list__video">
                 <div className="Video-list__video-image-container">
@@ -15,5 +17,7 @@ export default function Video_individual({id, image, title, channel, handleVideo
                 </div>
             </li>
         </Link>
+    </Route>
+    </BrowserRouter>
     )
 }
