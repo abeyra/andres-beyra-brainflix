@@ -18,7 +18,8 @@ class Main extends React.Component {
 
   state = {
     videos: [],
-    currentVideo: []
+    currentVideo: [],
+    allVideos: []
   }
   
   componentDidMount() {
@@ -32,8 +33,23 @@ class Main extends React.Component {
                     currentVideo: response.data[0]
                 });
 
-        })
+        axios.get(this.url + 'videos/' +  this.state.currentVideo.id +  '?api_key=' + this.apiKey)
+            .then(response => {
+                console.log(response.data);
+
+                this.setState({
+                        currentVideo: response.data
+                    });
+
+                })
+            })
+    
     }
+
+    // componentDidMount() {
+    // // const { videoId } = this.props.match.params;
+    
+    // }
 
     // componentDidUpdate(props) {
     //     console.log("update?");
@@ -58,7 +74,6 @@ class Main extends React.Component {
     render() {
         return (
             <>
-        
             <Hero 
                 currentVideo={this.state.currentVideo}
             />
@@ -79,8 +94,9 @@ class Main extends React.Component {
             </div>
             <div className="Main__container-right"> 
             <VIDEO_LIST 
+                allVideos={this.state.allVideos}
                 videos={this.state.videos}
-                currentVideo={this.state.videos[0]}
+                currentVideo={this.state.currentVideo}
                 handleVideoChange={this.handleVideoChange}
             />
             </div>

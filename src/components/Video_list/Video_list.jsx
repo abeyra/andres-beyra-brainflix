@@ -3,7 +3,7 @@ import VIDEO_INDIVIDUAL from '../Video_individual/Video_individual';
 // import React from 'react';
 // import axios from 'axios';
 
-export default function Video_list ({videos, currentVideo, handleVideoChange})  {
+export default function Video_list ({allVideos, videos, currentVideo, handleVideoChange})  {
 
 //     constructor(props) {
 //         super(props);
