@@ -17,7 +17,8 @@ class Main extends React.Component {
   }
 
   state = {
-    videos: []
+    videos: [],
+    currentVideo: []
   }
   
   componentDidMount() {
@@ -26,7 +27,10 @@ class Main extends React.Component {
         .then(response => {
             console.log(response.data);
             const videos = response.data;
-            this.setState({videos: videos});
+            this.setState({
+                    videos: videos,
+                    currentVideo: response.data[0]
+                });
             
             // const currentVideo = response.data[0];
             // this.setState({ videosList: videos });
@@ -34,10 +38,10 @@ class Main extends React.Component {
         })
     }
 
-    // componentDidUpdate(prevProps) {
+    // componentDidUpdate(props) {
     //     console.log("update?");
     //     const { videoId } = this.props.match.params;
-    //     if (videoId !== prevProps.match.params.videoId) {
+    //     if (videoId !== props.match.params.videoId) {
     //     console.log("Yes!!");
     //         axios.get(this.url + 'videos/:id?api_key=' + this.apiKey)
     //         .then(response => {
@@ -58,12 +62,12 @@ class Main extends React.Component {
     render() {
         return (
             <>
-            <BrowserRouter>
-            {/* <Hero 
-                videos={this.state.videos}
-                currentVideo={this.state.videos[0]}
-                handleVideoChange={this.handleVideoChange}
-            /> */}
+        
+            <Hero 
+                // videos={this.state.videos}
+                currentVideo={this.state.currentVideo}
+                // handleVideoChange={this.handleVideoChange}
+            />
             <section className="Main__container">
             <div className="Main__container-left">
             {/* <VIDEO_DETAILS 
@@ -87,7 +91,7 @@ class Main extends React.Component {
             />
             </div>
             </section>
-            </BrowserRouter>
+        
             </>
         )
     }

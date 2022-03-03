@@ -41,10 +41,15 @@ function App() {
   // render() {
     return (
       <>
+      <BrowserRouter>
       <Header />
+      <Switch>
+        <Route path="/" exact component={Main}/>
       <div className="App">
         <Main />    
       </div>
+      </Switch>
+      </BrowserRouter>
       </>
     )
   // }
