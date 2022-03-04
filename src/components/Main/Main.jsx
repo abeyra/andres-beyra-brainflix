@@ -8,13 +8,10 @@ import VIDEO_DETAILS from '../Video_details/Video_details';
 // import VIDEO_COMMENTS from '../Video_comments/Video_comments';
 import VIDEO_LIST from '../Video_list/Video_list';
 
-class Main extends React.Component {
+const url = "https://project-2-api.herokuapp.com/videos/";
+const apiKey = "?api_key=120bcad4-29c9-44b6-9fb0-55962463aa05";
 
-    constructor(props) {
-      super(props);
-      this.url = "https://project-2-api.herokuapp.com/";
-      this.apiKey = "120bcad4-29c9-44b6-9fb0-55962463aa05";
-  }
+class Main extends React.Component {
 
   state = {
     videos: [],
@@ -24,7 +21,7 @@ class Main extends React.Component {
   
   componentDidMount() {
     // const { videoId } = this.props.match.params;
-    axios.get(this.url + 'videos?api_key=' + this.apiKey)
+    axios.get(url + apiKey)
         .then(response => {
             console.log(response.data);
             const videos = response.data;
@@ -33,7 +30,8 @@ class Main extends React.Component {
                     currentVideo: response.data[0]
                 });
 
-        axios.get(this.url + 'videos/' +  this.state.currentVideo.id +  '?api_key=' + this.apiKey)
+        
+        axios.get(url + this.state.currentVideo.id + apiKey)
             .then(response => {
                 console.log(response.data);
 
@@ -46,23 +44,23 @@ class Main extends React.Component {
     
     }
 
-    // componentDidMount() {
-    // // const { videoId } = this.props.match.params;
-    
-    // }
-
-    // componentDidUpdate(props) {
-    //     console.log("update?");
-    //     const { videoId } = this.props.match.params;
-    //     if (videoId !== props.match.params.videoId) {
-    //     console.log("Yes!!");
-    //         axios.get(this.url + 'videos/:id?api_key=' + this.apiKey)
-    //         .then(response => {
-    //             console.log(response.data);
-    //             const currentVideo = response.data;
-    //         })
-    //     }
-    // }
+    componentDidUpdate(prevProps) {
+        console.log("update?");
+        console.log(this.props.match);
+        const { id } = this.props.match.params;
+        if (id !== prevProps.match.params.id) {
+        console.log("Yes!!");
+            axios.get(url + this.props.match.params.id + apiKey)
+            .then(response => {
+                console.log("First time printing!");
+                console.log(response.data);
+                this.setState({
+                    currentVideo: response.data
+                })
+                
+            })
+        }
+    }
 
   handleVideoChange = (id) => {
     const newVideoId = this.state.videos.findIndex(videos => id === videos.id)
@@ -81,8 +79,9 @@ class Main extends React.Component {
             <div className="Main__container-left">
             <VIDEO_DETAILS 
                 // videos={this.state.videos}
+                // id={this.state.currentVideo.id}
                 currentVideo={this.state.currentVideo}
-                // handleVideoChange={this.handleVideoChange}
+                handleVideoChange={this.handleVideoChange}
             />
             {/* <COMMENTS_FORM /> */}
             {/* <VIDEO_COMMENTS 
@@ -94,7 +93,7 @@ class Main extends React.Component {
             </div>
             <div className="Main__container-right"> 
             <VIDEO_LIST 
-                allVideos={this.state.allVideos}
+                // allVideos={this.state.allVideos}
                 videos={this.state.videos}
                 currentVideo={this.state.currentVideo}
                 handleVideoChange={this.handleVideoChange}

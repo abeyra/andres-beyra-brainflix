@@ -2,11 +2,14 @@ import './Video_details.scss';
 import React from 'react';
 import Views from '../../assets/icons/views.svg';
 import Likes from '../../assets/icons/likes.svg';
+// import {Link, Route, BrowserRouter} from 'react-router-dom'; 
 
-export default function Video_details({currentVideo}) {
+
+export default function Video_details({currentVideo, handleVideoChange}) {
 
         return (
             <>
+    
             <section className="Video_details">
                 <h1 className="Video_details-title">{currentVideo.title}</h1>
                 <div className="Video_details-metrics">
@@ -27,6 +30,9 @@ export default function Video_details({currentVideo}) {
                 </div>
                 <p className="Video_details-description">{currentVideo.description}</p>        
             </section>
+  
+    
+
             </>
         )
     }

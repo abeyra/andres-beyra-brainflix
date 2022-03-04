@@ -41,15 +41,22 @@ function App() {
   // render() {
     return (
       <>
+      <div className="App">
       <BrowserRouter>
       <Header />
       <Switch>
         <Route path="/" exact component={Main}/>
-      <div className="App">
-        <Main />    
-      </div>
+        {/* <Route path="/upload" component={} /> */}
+        <Route
+          path="/videos/:id"
+          render={(routerProps) => {
+            return <Main {...routerProps} />;
+          }}
+        />
+     
       </Switch>
       </BrowserRouter>
+       </div>
       </>
     )
   // }
