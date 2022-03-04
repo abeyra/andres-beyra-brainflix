@@ -1,12 +1,13 @@
 import './Video_comments.scss';
 
-export default function Video_comments({currentVideo, key}) {
+export default function Video_comments({comments, key}) {
 
     return (
         <>
             <section className="Comments">
                 <ul className="Comments__container">
-                    {currentVideo.comments.map((comment) => {
+                    {console.log(comments)}
+                    {comments.map((comment) => {
                         return (
                             <li className='Comments__post' key={comment.id}>
                                 <div className="Comments__post-circle"></div>

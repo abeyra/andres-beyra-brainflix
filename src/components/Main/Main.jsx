@@ -4,8 +4,8 @@ import React from 'react';
 import axios from 'axios';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import VIDEO_DETAILS from '../Video_details/Video_details';
-// import COMMENTS_FORM from '../Comments_form/Comments_form';
-// import VIDEO_COMMENTS from '../Video_comments/Video_comments';
+import COMMENTS_FORM from '../Comments_form/Comments_form';
+import VIDEO_COMMENTS from '../Video_comments/Video_comments';
 import VIDEO_LIST from '../Video_list/Video_list';
 
 const url = "https://project-2-api.herokuapp.com/videos/";
@@ -16,7 +16,7 @@ class Main extends React.Component {
   state = {
     videos: [],
     currentVideo: [],
-    allVideos: []
+    comments: []
   }
   
   componentDidMount() {
@@ -36,7 +36,8 @@ class Main extends React.Component {
                 console.log(response.data);
 
                 this.setState({
-                        currentVideo: response.data
+                        currentVideo: response.data,
+                        comments: response.data.comments
                     });
 
                 })
@@ -55,7 +56,8 @@ class Main extends React.Component {
                 console.log("First time printing!");
                 console.log(response.data);
                 this.setState({
-                    currentVideo: response.data
+                    currentVideo: response.data,
+                    comments: response.data.comments
                 })
                 
             })
@@ -83,13 +85,13 @@ class Main extends React.Component {
                 currentVideo={this.state.currentVideo}
                 handleVideoChange={this.handleVideoChange}
             />
-            {/* <COMMENTS_FORM /> */}
-            {/* <VIDEO_COMMENTS 
+            <COMMENTS_FORM />
+            <VIDEO_COMMENTS 
                 // key={this.state.videos[0].id}
-                videos={this.state.videos}
-                currentVideo={this.state.videos[0]}
-                handleVideoChange={this.handleVideoChange}
-            /> */}
+                // videos={this.state.videos}
+                comments={this.state.comments}
+                // handleVideoChange={this.handleVideoChange}
+            />
             </div>
             <div className="Main__container-right"> 
             <VIDEO_LIST 
