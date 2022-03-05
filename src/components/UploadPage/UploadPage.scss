@@ -1,0 +1,12 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+
+.Upload {
+    padding: 0 1rem; 
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+}
