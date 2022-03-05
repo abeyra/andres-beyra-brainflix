@@ -1,11 +1,10 @@
 import './Video_individual.scss';
-import {Link, Route, BrowserRouter} from 'react-router-dom'; 
+import {Link} from 'react-router-dom'; 
 
-export default function Video_individual({id, image, title, channel, handleVideoChange}) {
+export default function Video_individual({id, image, title, channel}) {
 
     return (
-    
-        <Link to={`/videos/${id}`} onClick={() => handleVideoChange(id) }>
+        <Link to={`/videos/${id}`} className="Video-list__link">
             <li className="Video-list__video">
                 <div className="Video-list__video-image-container">
                     <img className="Video-list__video-image" src={image} alt="video" />
@@ -16,6 +15,5 @@ export default function Video_individual({id, image, title, channel, handleVideo
                 </div>
             </li>
         </Link>
-
     )
 }

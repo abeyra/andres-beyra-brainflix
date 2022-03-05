@@ -33,11 +33,8 @@
 
     &__link {
         text-decoration: none;
+        color: inherit;
         cursor: pointer;
-
-        &:visited {
-            color: black;
-        }
     }
 
     &__video {
