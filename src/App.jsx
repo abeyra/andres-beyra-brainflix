@@ -2,8 +2,8 @@ import './reset.css';
 import './App.scss';
 import React from 'react';
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import UploadPage from './components/UploadPage/UploadPage';
+import HomePage from './pages/HomePage/HomePage';
+import UploadPage from './pages/UploadPage/UploadPage';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
         <BrowserRouter>
           <Header />
             <Switch>
-              <Route path="/" exact component={Main}/>
+              <Route path="/" exact component={HomePage}/>
               <Route path="/upload" component={UploadPage}/>
-              <Route path="/videos/:id" component={Main}/>
+              <Route path="/videos/:id" component={HomePage}/>
             </Switch>
         </BrowserRouter>
       </div>
