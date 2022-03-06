@@ -60,13 +60,6 @@ class Main extends React.Component {
         }
     }
 
-//   handleVideoChange = (id) => {
-//     const newVideoId = this.state.videos.findIndex(videos => id === videos.id)
-//     this.setState({
-//       currentVideo: this.state.videos[newVideoId]
-//     })
-//   }
-
     render() {
         return (
             <>

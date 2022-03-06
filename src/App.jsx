@@ -8,23 +8,6 @@ import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 
 function App() {
 
-  // let submit = (event) => {
-  //   alert("Video Uploaded!");
-  //   <Redirect to="/" />
-  // }
-
-  let handleSubmit = (event) => {
-        event.preventDefault();
-        const form = event.target; 
-        const title = form.videoTitle.value;
-        const description = form.videoDescription.value;
-        if(title && description){
-            alert("Upload Successful!")
-        } else {
-            alert("fill out form!")
-        }
-    }
-
   return (
     <>
       <div className="App">
@@ -32,7 +15,7 @@ function App() {
           <Header />
             <Switch>
               <Route path="/" exact component={Main}/>
-              <Route path="/upload" component={UploadPage} handleSubmit={handleSubmit}/>
+              <Route path="/upload" component={UploadPage}/>
               <Route path="/videos/:id" component={Main}/>
             </Switch>
         </BrowserRouter>
