@@ -4,9 +4,74 @@
 
 .Upload {
     padding: 0 1rem; 
+    border-top: .0625rem solid $Mercury;
+    font-family: 'AvenirNext';
+
+    &__title {
+        font-size: 1.5rem;
+        font-family: 'AvenirNext';
+        font-weight: 600;
+        padding: 1.5rem 0 1rem 0;
+    }
 
     &__form {
         display: flex;
         flex-direction: column;
+
+        &-label {
+            font-size: .75rem;
+            font-family: 'AvenirNext';
+            font-weight: 700;
+            padding-top: 1rem;
+            padding-bottom: .25rem;
+            color: $Silver;
+        }
+
+        &-image {
+            border-radius: .25rem;
+        }
+
+        &-input {
+            font-family: 'AvenirNext';
+            border: .0625rem solid $Mercury;
+            border-radius: .25rem;
+            padding: .625rem;
+            background-color: $Alabaster;
+        }
+
+        &-textarea {
+            font-family: 'AvenirNext';
+            height: 4.375rem;
+            resize: none;
+            border: .0625rem solid $Mercury;
+            border-radius: .25rem;
+            padding: .625rem;
+            margin-bottom: 1.5rem;
+            background-color: $Alabaster;
+        }
+
+        &-publish-container {
+            position: relative;
+
+            &-button {
+                @include cta;
+            }
+
+            &-icon {
+                position: absolute;
+                color: white;
+                left: .5rem;
+                top: .5rem;
+            }
+        }
+    }
+
+    &__cancel-button {
+        font-family: 'AvenirNext';
+        text-align: center;
+        border: none; 
+        background: none; 
+        margin: 2rem 0; 
+        color: $BrainFlix-Blue; 
     }
 }

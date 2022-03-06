@@ -114,6 +114,7 @@
         border-radius: .25rem;
         background-color: $BrainFlix-Blue;
         color: $White;
+        cursor: pointer;
 
         @include tablet {
             margin: 0; 
