@@ -4,7 +4,7 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import UploadPage from './components/UploadPage/UploadPage';
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
 
