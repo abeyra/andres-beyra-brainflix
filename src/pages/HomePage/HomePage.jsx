@@ -16,7 +16,6 @@ export default class HomePage extends Component {
   componentDidMount() {
     axios.get(url + apiKey)
         .then(response => {
-            console.log(response.data);
             const videos = response.data;
             this.setState({
                     videos: videos,
@@ -26,7 +25,6 @@ export default class HomePage extends Component {
         
         axios.get(url + this.state.currentVideo.id + apiKey)
             .then(response => {
-                console.log(response.data);
 
                 this.setState({
                         currentVideo: response.data,
@@ -37,15 +35,10 @@ export default class HomePage extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.log("update?");
-        console.log(this.props.match);
         const { id } = this.props.match.params;
         if (id !== prevProps.match.params.id) {
-        console.log("Yes!!");
             axios.get(url + this.props.match.params.id + apiKey)
             .then(response => {
-                console.log("First time printing!");
-                console.log(response.data);
                 this.setState({
                     currentVideo: response.data,
                     comments: response.data.comments

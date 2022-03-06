@@ -6,13 +6,13 @@ import VIDEO_COMMENTS from '../Video_comments/Video_comments';
 import VIDEO_LIST from '../Video_list/Video_list';
 
 export default function Main({videos, currentVideo, comments}) {
-
-        return (
-            <>
-                <Hero 
-                    currentVideo={currentVideo}
-                />
-                <section className="Main__container">
+    
+    return (
+        <>
+            <Hero 
+                currentVideo={currentVideo}
+            />
+            <section className="Main__container">
                 <div className="Main__container-left">
                     <VIDEO_DETAILS 
                         currentVideo={currentVideo}
@@ -28,7 +28,7 @@ export default function Main({videos, currentVideo, comments}) {
                         currentVideo={currentVideo}
                     />
                 </div>
-                </section>
-            </>
-        )
-    }
+            </section>
+        </>
+    )
+}

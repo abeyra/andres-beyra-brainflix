@@ -2,6 +2,7 @@ import './Comments_form.scss';
 import CTA from '../../assets/icons/add_comment.svg';
 
 export default function Comments_form() {
+    
     return (
         <>
             <section className="Comments_form">
