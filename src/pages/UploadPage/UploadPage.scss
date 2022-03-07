@@ -7,16 +7,55 @@
     border-top: .0625rem solid $Mercury;
     font-family: 'AvenirNext';
 
+    @include tablet {
+        padding: 0 2.25rem;
+    }
+
+    @include desktop {
+        padding: 0 7.5rem; 
+    }
+
     &__title {
         font-size: 1.5rem;
         font-family: 'AvenirNext';
         font-weight: 600;
         padding: 1.5rem 0 1rem 0;
+
+        @include tablet {
+            font-size: 2.0625rem;
+            padding: 2.5rem 0 2rem 0;
+            margin-bottom: .5rem; 
+            border-bottom: .0625rem solid $Mercury;
+        }
+
+        @include desktop {
+            margin-bottom: 0;
+        }
     }
 
     &__form {
         display: flex;
         flex-direction: column;
+
+        &-content-container {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                flex-direction: row;
+                align-items: center;
+                padding-bottom: 2rem;
+            }
+        }
+
+        &-image-container {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                margin-right: 1.5rem;
+            }
+        }
 
         &-label {
             font-size: .75rem;
@@ -25,10 +64,33 @@
             padding-top: 1rem;
             padding-bottom: .25rem;
             color: $Silver;
+
+            @include tablet {
+                font-size: .8125rem;
+                padding-top: 1.5rem; 
+                padding-bottom: .5rem;
+            }
         }
 
         &-image {
             border-radius: .25rem;
+
+            @include tablet {
+                width: 48vw;
+            }
+
+            @include desktop {
+                width: 26vw; 
+            }
+        }
+
+        &-inputs-container {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                width: 75vw; 
+            }
         }
 
         &-input {
@@ -48,13 +110,33 @@
             padding: .625rem;
             margin-bottom: 1.5rem;
             background-color: $Alabaster;
+
+            @include desktop {
+                margin: 0;
+            }
         }
 
         &-publish-container {
             position: relative;
+            text-align: center;
+
+            @include tablet {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                border-top: .0625rem solid $Mercury;
+            }
 
             &-button {
                 @include cta;
+
+                @include tablet {
+                    width: 21vw;
+                }
+
+                @include desktop {
+                    width: 10vw; 
+                }
             }
 
             &-icon {
@@ -62,16 +144,35 @@
                 color: white;
                 left: .5rem;
                 top: .5rem;
+
+                @include tablet {
+                    left: unset;
+                    top: unset;
+                    right: 8.25rem;
+                    height: 1.375rem;
+                }
+
+                @include desktop {
+                    left: unset;
+                    top: unset;
+                    right: 7.6875rem;
+                }
+            }
+
+            &-cancel-button {
+                font-family: 'AvenirNext';
+                font-weight: 600;
+                border: none; 
+                background: none; 
+                margin: 2rem 0; 
+                color: $BrainFlix-Blue; 
+
+                @include tablet {
+                    margin: 2.25rem 4rem 2.25rem 0;
+                }
             }
         }
     }
 
-    &__cancel-button {
-        font-family: 'AvenirNext';
-        text-align: center;
-        border: none; 
-        background: none; 
-        margin: 2rem 0; 
-        color: $BrainFlix-Blue; 
-    }
+ 
 }
