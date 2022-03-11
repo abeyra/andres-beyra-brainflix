@@ -2,8 +2,9 @@ import Main from '../../components/Main/Main';
 import {Component} from 'react';
 import axios from 'axios';
 
-const url = "https://project-2-api.herokuapp.com/videos/";
-const apiKey = "?api_key=120bcad4-29c9-44b6-9fb0-55962463aa05";
+// const url = "https://project-2-api.herokuapp.com/videos/";
+const url = "http://localhost:5001/videos/";
+// const apiKey = "?api_key=120bcad4-29c9-44b6-9fb0-55962463aa05";
 
 export default class HomePage extends Component {
 
@@ -14,31 +15,24 @@ export default class HomePage extends Component {
   }
   
   componentDidMount() {
-    axios.get(url + apiKey)
+      axios.get(url)
         .then(response => {
-            const videos = response.data;
+            console.log(response.data);
+            const allVideos = response.data;
             this.setState({
-                    videos: videos,
-                    currentVideo: response.data[0]
-                });
-
-        
-        axios.get(url + this.state.currentVideo.id + apiKey)
-            .then(response => {
-
-                this.setState({
-                        currentVideo: response.data,
-                        comments: response.data.comments
-                    });
-                })
+                videos: allVideos,
+                currentVideo: response.data[0],
+                comments: response.data[0].comments
             })
+        })     
     }
 
-    componentDidUpdate(prevProps) {
+   componentDidUpdate(prevProps) {
         const { id } = this.props.match.params;
         if (id !== prevProps.match.params.id) {
-            axios.get(url + this.props.match.params.id + apiKey)
+            axios.get(url + this.props.match.params.id)
             .then(response => {
+                console.log(response.data);
                 this.setState({
                     currentVideo: response.data,
                     comments: response.data.comments
@@ -46,6 +40,7 @@ export default class HomePage extends Component {
             })
         }
     }
+
 
     render() {
         return (
@@ -59,3 +54,38 @@ export default class HomePage extends Component {
         )
     }
 }
+
+//   componentDidMount() {
+//     axios.get(url + apiKey)
+//         .then(response => {
+//             const videos = response.data;
+//             this.setState({
+//                     videos: videos,
+//                     currentVideo: response.data[0]
+//                 });
+
+        
+//         axios.get(url + this.state.currentVideo.id + apiKey)
+//             .then(response => {
+
+//                 this.setState({
+//                         currentVideo: response.data,
+//                         comments: response.data.comments
+//                     });
+//                 })
+//             })
+//     }
+
+    // componentDidUpdate(prevProps) {
+    //     const { id } = this.props.match.params;
+    //     if (id !== prevProps.match.params.id) {
+    //         axios.get(url + this.props.match.params.id)
+    //         .then(response => {
+    //             console.log(response.data);
+    //             this.setState({
+    //                 currentVideo: response.data,
+    //                 comments: response.data.comments
+    //             })            
+    //         })
+    //     }
+    // }

@@ -1,6 +1,7 @@
 import './Video_comments.scss';
+const { v4: uuidv4 } = require('uuid');
 
-export default function Video_comments({comments, key}) {
+export default function Video_comments({comments}) {
 
     return (    
                 <>
@@ -8,7 +9,7 @@ export default function Video_comments({comments, key}) {
                         <ul className="Comments__container">
                             {comments.map((comment) => {
                                 return (
-                                    <li className='Comments__post' key={comment.id}>
+                                    <li key={uuidv4()} className='Comments__post' >
                                         <div className="Comments__post-circle"></div>
                                         <div className="Comments__post-content">
                                             <h3 className="Comments__post-content-author">{comment.name}</h3>
