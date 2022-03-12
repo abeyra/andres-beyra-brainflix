@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage/HomePage';
 import UploadPage from './pages/UploadPage/UploadPage';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-function App() {
+export default function App() {
 
   return (
     <>
@@ -23,5 +23,3 @@ function App() {
     </>
   )
 }
-
-export default App;

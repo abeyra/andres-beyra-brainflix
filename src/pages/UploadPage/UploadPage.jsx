@@ -3,8 +3,8 @@ import Bike from "../../assets/images/Upload-video-preview.jpg";
 import PublishIcon from "../../assets/icons/publish.svg";
 import { Component } from "react";
 import { Redirect } from "react-router-dom";
-import axios from 'axios';
-const { v4: uuidv4 } = require('uuid');
+import axios from "axios";
+const { v4: uuidv4 } = require("uuid");
 const url = "http://localhost:5001/videos/";
 
 export default class UploadPage extends Component {
@@ -18,15 +18,14 @@ export default class UploadPage extends Component {
     const title = event.target.videoTitle.value;
     const description = event.target.videoDescription.value;
     let id = uuidv4();
-    
+
     if (title && description) {
-        alert("Upload Successful!");
-       
-        axios.post(url, {title, description, id})
-        .then(response => {
-            console.log(response);
-        })
-        this.setState({ submitted: true });
+      alert("Upload Successful!");
+
+      axios.post(url, { title, description, id }).then((response) => {
+        console.log(response);
+      });
+      this.setState({ submitted: true });
     } else {
       alert("Failed to upload, fill out form!");
     }
