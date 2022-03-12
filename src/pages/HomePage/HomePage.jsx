@@ -2,9 +2,7 @@ import Main from '../../components/Main/Main';
 import {Component} from 'react';
 import axios from 'axios';
 
-// const url = "https://project-2-api.herokuapp.com/videos/";
 const url = "http://localhost:5001/videos/";
-// const apiKey = "?api_key=120bcad4-29c9-44b6-9fb0-55962463aa05";
 
 export default class HomePage extends Component {
 

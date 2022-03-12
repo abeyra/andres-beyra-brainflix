@@ -18,7 +18,6 @@ export default class UploadPage extends Component {
     const title = event.target.videoTitle.value;
     const description = event.target.videoDescription.value;
     let id = uuidv4();
-    // let image = '../../assets/images/Upload-video-preview.jpg';
     
     if (title && description) {
         alert("Upload Successful!");
