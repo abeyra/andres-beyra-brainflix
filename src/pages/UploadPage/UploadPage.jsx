@@ -14,7 +14,6 @@ export default class UploadPage extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const form = event.target;
     const title = event.target.videoTitle.value;
     const description = event.target.videoDescription.value;
     let id = uuidv4();
@@ -22,9 +21,7 @@ export default class UploadPage extends Component {
     if (title && description) {
       alert("Upload Successful!");
 
-      axios.post(url, { title, description, id }).then((response) => {
-        console.log(response);
-      });
+      axios.post(url, { title, description, id })
       this.setState({ submitted: true });
     } else {
       alert("Failed to upload, fill out form!");
