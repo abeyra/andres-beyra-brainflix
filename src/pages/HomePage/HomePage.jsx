@@ -2,7 +2,7 @@ import Main from "../../components/Main/Main";
 import { Component } from "react";
 import axios from "axios";
 
-const url = "http://localhost:5001/videos/";
+const url = "http://localhost:8080/videos";
 
 export default class HomePage extends Component {
   state = {
@@ -11,24 +11,8 @@ export default class HomePage extends Component {
     comments: [],
   };
 
-  componentDidMount() {
-    axios.get(url).then((response) => {
-      const allVideos = response.data;
-      this.setState({
-        videos: allVideos,
-        currentVideo: response.data[0],
-        comments: response.data[0].comments,
-      });
-    })
-    .catch(error => {
-      console.log(error);
-    })
-  }
-
-  componentDidUpdate(prevProps) {
-    const { id } = this.props.match.params;
-    if (id !== prevProps.match.params.id) {
-      axios.get(url + this.props.match.params.id).then((response) => {
+  getVideoById = (id) => {
+    axios.get(url + '/' + id).then((response) => {
         this.setState({
           currentVideo: response.data,
           comments: response.data.comments,
@@ -37,6 +21,26 @@ export default class HomePage extends Component {
       .catch(error => {
         console.log(error);
       })
+  }
+
+  componentDidMount() {
+    axios.get(url).then((response) => {
+      const allVideos = response.data;
+      this.setState({
+        videos: allVideos,
+      });
+      const videoId = this.props.match.params.id || response.data[0].id;
+      this.getVideoById(videoId);
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+     const videoId = this.props.match.params.id || this.state.videos[0].id;
+    if (prevState.currentVideo && prevState.currentVideo.id !== videoId) {
+      this.getVideoById(videoId);
     }
   }
 
