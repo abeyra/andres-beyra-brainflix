@@ -10,6 +10,7 @@ const url = "http://localhost:5001/videos/";
 export default class UploadPage extends Component {
   state = {
     submitted: false,
+    cancelled: false
   };
 
   handleSubmit = (event) => {
@@ -21,15 +22,21 @@ export default class UploadPage extends Component {
     if (title && description) {
       alert("Upload Successful!");
 
-      axios.post(url, { title, description, id })
+      axios.post(url, { title, description, id });
       this.setState({ submitted: true });
     } else {
       alert("Failed to upload, fill out form!");
     }
   };
 
+  cancelSubmit = () => {
+    this.setState({ cancelled: true });
+  }
+
   render() {
     if (this.state.submitted) {
+      return <Redirect to="/" />;
+    } else if (this.state.cancelled) {
       return <Redirect to="/" />;
     }
 
@@ -83,7 +90,7 @@ export default class UploadPage extends Component {
                 src={PublishIcon}
                 alt="publish icon"
               />
-              <button className="Upload__form-publish-container-cancel-button">
+              <button type="button" className="Upload__form-publish-container-cancel-button" onClick={this.cancelSubmit}>
                 CANCEL
               </button>
             </div>

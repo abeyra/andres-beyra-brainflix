@@ -13,26 +13,30 @@ export default class HomePage extends Component {
 
   componentDidMount() {
     axios.get(url).then((response) => {
-      console.log(response.data);
       const allVideos = response.data;
       this.setState({
         videos: allVideos,
         currentVideo: response.data[0],
         comments: response.data[0].comments,
       });
-    });
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
 
   componentDidUpdate(prevProps) {
     const { id } = this.props.match.params;
     if (id !== prevProps.match.params.id) {
       axios.get(url + this.props.match.params.id).then((response) => {
-        console.log(response.data);
         this.setState({
           currentVideo: response.data,
           comments: response.data.comments,
         });
-      });
+      })
+      .catch(error => {
+        console.log(error);
+      })
     }
   }
 
