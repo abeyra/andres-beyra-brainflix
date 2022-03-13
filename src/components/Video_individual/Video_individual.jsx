@@ -1,7 +1,7 @@
-import './Video_individual.scss';
+import './Video_Individual.scss';
 import {Link} from 'react-router-dom'; 
 
-export default function Video_individual({id, image, title, channel}) {
+export default function Video_Individual({id, image, title, channel}) {
 
     return (
         <Link to={`/videos/${id}`} className="Video-list__link">

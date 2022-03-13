@@ -1,7 +1,7 @@
-import './Video_list.scss';
-import VIDEO_INDIVIDUAL from '../Video_individual/Video_individual';
+import './Video_List.scss';
+import VIDEO_INDIVIDUAL from '../Video_Individual/Video_Individual';
 
-export default function Video_list ({videos, currentVideo})  {
+export default function Video_List ({videos, currentVideo})  {
 
     return (
         <>

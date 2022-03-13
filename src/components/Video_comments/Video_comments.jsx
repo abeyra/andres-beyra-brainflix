@@ -1,7 +1,7 @@
-import './Video_comments.scss';
+import './Video_Comments.scss';
 const { v4: uuidv4 } = require('uuid');
 
-export default function Video_comments({comments}) {
+export default function Video_Comments({comments}) {
 
     return (    
                 <>
