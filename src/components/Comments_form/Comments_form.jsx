@@ -1,7 +1,7 @@
-import './Comments_Form.scss';
+import './Comments_form.scss';
 import CTA from '../../assets/icons/add_comment.svg';
 
-export default function Comments_Form() {
+export default function Comments_form() {
     
     return (
         <>

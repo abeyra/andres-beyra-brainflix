@@ -1,8 +1,8 @@
-import './Video_Details.scss';
+import './Video_details.scss';
 import Views from '../../assets/icons/views.svg';
 import Likes from '../../assets/icons/likes.svg';
 
-export default function Video_Details({currentVideo}) {
+export default function Video_details({currentVideo}) {
     
     return (
         <>
