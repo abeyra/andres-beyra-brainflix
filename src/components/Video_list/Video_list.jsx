@@ -1,5 +1,5 @@
 import './Video_List.scss';
-import VIDEO_INDIVIDUAL from '../Video_Individual/Video_Individual';
+import Video_Individual from '../Video_Individual/Video_Individual';
 
 export default function Video_List ({videos, currentVideo})  {
 
@@ -12,7 +12,7 @@ export default function Video_List ({videos, currentVideo})  {
                     .filter(video => video.id !== currentVideo.id)
                         .map((video) => {
                             return (
-                                <VIDEO_INDIVIDUAL 
+                                <Video_Individual 
                                     key={video.id}
                                     id={video.id}
                                     image={video.image}

@@ -1,9 +1,9 @@
 import './Main.scss';
 import Hero from '../Hero/Hero';
-import VIDEO_DETAILS from '../Video_Details/Video_Details';
-import COMMENTS_FORM from '../Comments_Form/Comments_Form';
-import VIDEO_COMMENTS from '../Video_Comments/Video_Comments';
-import VIDEO_LIST from '../Video_List/Video_List';
+import Video_Details from '../Video_Details/Video_Details';
+import Comments_Form from '../Comments_Form/Comments_Form';
+import Video_Comments from '../Video_Comments/Video_Comments';
+import Video_List from '../Video_List/Video_List';
 
 export default function Main({videos, currentVideo, comments}) {
     
@@ -14,16 +14,16 @@ export default function Main({videos, currentVideo, comments}) {
             />
             <section className="Main__container">
                 <div className="Main__container-left">
-                    <VIDEO_DETAILS 
+                    <Video_Details 
                         currentVideo={currentVideo}
                     />
-                    <COMMENTS_FORM />
-                    <VIDEO_COMMENTS 
+                    <Comments_Form />
+                    <Video_Comments 
                         comments={comments}
                     />
                 </div>
                 <div className="Main__container-right"> 
-                    <VIDEO_LIST 
+                    <Video_List 
                         videos={videos}
                         currentVideo={currentVideo}
                     />
